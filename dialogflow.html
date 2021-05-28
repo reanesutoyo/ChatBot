@@ -133,6 +133,7 @@
 						<li><strong>Fulfillment:</strong> By default, our chatbot responds to a matched intent with a static response, however if you want to advance your chatbot, which is something we are hoping we would have time to get into, this is a “logic” or “smart” code that excutes when an intent is matched, our chatbot would then be able to perform an action or return a dynamic response by sending a webhook request to an external APIs and databases.  This part is of cos more complicated, however if time allowed, we would give it a go.</li>
 						<p align = "center" ><img src="images/Dialogflow4.jpg" alt="" width="" height="" ></p>	
 						<p><a href="https://cloud.google.com/architecture/building-and-deploying-chatbot-dialogflow. ">https://cloud.google.com/architecture/building-and-deploying-chatbot-dialogflow.</a>&gt;</p> 
+						
 						<p><strong>Integrations:</strong> this section is awesome and definitely a feature we will be using, this is where we can integration to our own website, and conversational platforms potentially for example Facebook, Twitter, Skype and other social media platforms, IoTs like Amazon Alexa, and Google Assistant (via a Google Home device or an Android smart phone) which are exactly the functions that we were looking for. Although different platforms, the chatbot will offer the same core chat functionality. </p>
 						<p align = "center" ><img src="images/Dialogflow5.jpg" alt="" width="" height="" ></p>
 						<p>We explored Dialogflow as a Chatbot development platform by Google that enables developers to develop audio and conversational chatbots to automatically responds to user's questions in multiple languages. It is used for Natural language processing using Machine learning; it runs on the Google infrastructure. Infrastructure can be scaled according to your needs. We tested out the platform and found out some beneficial features that are available, for example, easy integration website's webchat service </p>
@@ -160,11 +161,80 @@
 							<li>Other times Dialogflow Chatbot may ask for more information from the user if the chatbot does not recognize the question, or may lead users to websites related to their requests. </li>
 							<li>Dialogflow will respond to the user</li>
 						</ol>
+						<h6>Week 4 (May 8th – May 14th)</h6>
+						<p>Once everything was ready, we have started inputting all the intents and entities into our Dialogflow Chatbot. </p>
+						<h6>CONTINUED THE DIALOG DESIGN AND INPUT OF DATA</h6>
 						
-						
+						<p>As main focus of interaction is between the user and the chatbot, which is carried out through natural language, the conversation design is a crucial aspect to consider when designing the chatbot. To achieve this; appropriate dialog will be designed through the Dialogflow console using follow-up and fallback intents. A particular intent will be set, that once invoked by the user, the chatbot will end the conversation effectively regardless of the conversational context. The dialog is the collection of words and phrases used to respond to user input. </p>
+						<p>Dialogflow based on user’s input finds the User’s Intent, determines what Action should be taken and returns a respond.</p>
+						<p align = "center" ><img src="images/Dialogflow7.jpg" alt="" width="" height="" ></p>
+						<h6>Week 5  (May-15th – May 21st)</h6>
 						<p></p>
-						<p></p>
+						<ul>
+							<li>Our website</li>
+							<li>Facebook</li>
+							<li>Google Assisstant</li>
+						</ul>
+						<p><strong>Hardware Requirements</strong></p>
+						<ul>
+							<li>Mobile Devices</li>
+							<li>PC</li>
+							<li>IoTs – Optional to test prototype - Google Home</li>
+						</ul>
+						<p><strong>Software Platforms and Development Tools</strong></p>
+						<ul>
+							<li>Natural Language Processing (NLP) Platforms which is Dialogflow</li>
+							<li>Google Cloud Platform – to integrate to google Assistant</li>
+							<li>GitHub – to integrate to our website</li>
+							<li>Facebook Page</li>
+							<li>Facebook Developer account </li>
+						</ul>
+						<p>The chatbot is ready and we have started to plan to Integrate our chatbot into other platforms which includes the following, below is the plan on how we will integrate to these platforms:</p>
+						<h6>Integrating to our Github website:</h6>
+						<p align = "center" ><img src="images/dialogflow8.jpg" alt="" width="" height="" ></p>
+						<p>We switched the button to ON. You will see a URL where you can change the icon and title of your Agent, as well as a place where you can edit the URL. </p>
+						<p>It is most straightforward to integrate Dialogflow into an HTML page by using the iframe. Ensure that “Web Demo” is selected in the Integrations menu and that it is also checked in the box on the left. To use this method, you must copy and paste the HTML code on your website, and then click on the agent's name to go directly to their profile page. </p>
+						<h6>Integrating to our Facebook Messenger </h6>
+						<p>Through some research, there is no official method for including chatbots as an option in customer support section on Facebook. The chatbot would be a completely replace the Facebook chat widget. Whenever a chat escalates, the user would receive a link to that page that the customer requested.  </p>
+						<p>Below were the steps summarized from official google Dialogflow tutorial</p>
+						<ol type = "1">
+							<li>Once you've created your Dialogflow bot, we are ready to integrate to our facebook page.</li>
+							
+							<li>Create a Facebook fan page.</li>
+							<p align = "center" ><img src="images/dialogflow9.jpg" alt="" width="" height="" ></p>
+							
+
+							<li>Create a Facebook Developer account link here https://developers.facebook.com/apps.</li>
+							<p align = "center" ><img src="images/dialogflow10.jpg" alt="" width="" height="" ></p>
+							<li>Use the Dialogflow connector integration to connect your Facebook app with the Dialogflow Agent. This is where Click on the INTEGRATIONS button on the sidebar menu and then click on Messenger From Facebook.</li>
+							<p align = "center" ><img src="images/dialogflow11.jpg" alt="" width="" height="" ></p>	
+							<li>And enable the Facebook Messenger. Where I will have callback  Url and Page Access Token to get me started </li>
+							<p align = "center" ><img src="images/dialogflow12.jpg" alt="" width="" height="" ></p>
+							<li>In Dialog Flow I need to choose Facebook Messenger and Click it after that the window pop up asking for Page Access Token, That Page Access Token is from the Facebook Developer Account for the Facebook Page that I have created.</li>
+							<p align = "center" ><img src="images/dialogflow13.jpg" alt="" width="" height="" ></p>
+							<li>So after that I have to go settings in Facebook Page that I just created in developers Facebook account.  So I have To Generate a token that link I will be use in DialogFlow. The content from the page and I going to make Verify Token which is long password that I created and unique in DialogFlow </li>
+							<p align = "center" ><img src="images/dialogflow14.jpg" alt="" width="" height="" ></p>
+							<li>8.	Test the Chatbot on Facebook's Page or on Facebook Messenger. Visit the Facebook page that we’ve created. To see as page visitor, click on the View as Page Visitor option in the top menu bar. This chatbot will not be available to the general public. The limitation here is that only admins or the person who created the Facebook app can converse with the chatbot. The app needs to be distributed to everyone in order for it to be available.</li>
+							
+						</ol>
 						
+							<h6>Integrating to Google Assistant</h6>
+							<p>Prerequisite : Sign up for Google Cloud Platform (GCP)</p>
+							<p>We had to go through the registration process for a GCP account, which gives us a 2-month and $200 credit, which is enough to get started and covers most of our prototyping needs. We completed the sign-up process here: </p>
+							<p><a href="https://cloud.google.com/free/ ">https://cloud.google.com/free/</a>&gt;</p> 
+						
+							<p>Once everything is prepared, we will take our chatbot to Google Assistant. We will have to revisit the Integration menu link in order to accomplish that. Similarly, to my earlier comment, we have integrations with a wide range of popular messaging platforms and interfaces. </p>
+							<p>“Google Assistant” is listed as one of the available options. In order to better serve our customers, the Google Assistant will be found on various devices, including smartphones, Google Home devices, and a variety of other google devices that will be available to our customers.</p>
+								<p align = "center" ><img src="images/dialogflow15.jpg" alt="" width="" height="" ></p>
+								<p align = "center" ><img src="images/dialogflow16.jpg" alt="" width="" height="" ></p>
+							<p>This will bring up Actions on Google configuration dialog as shown above, then we signed in to our GCP and clicked test	
+							A console that is similar to the GCP console is being taken to, which means that we're getting to the Actions for Google console.</p>
+						
+						<h6>Week 6  (May-15th – May 21st)</h6>
+						<p>This week we mainly focused on testing. We first used the google built-in actional consoles action simulator to test the web interface that simulates the hardware and our settings to test our prototype quickly. To top it all off, we can view debug information regarding your fulfillment, such as the requests and responses it receives and sends.</p>
+						<p>We also have tested in multiple platforms to make sure our project is consistent and stable. We have three layers of testing unit testing, performance testing, load testing, and user testing. (More details about testing are down in the testing section)
+						And mainly focused on writing and finalizing everything that was done. 
+						</p>
 					</article class>
 						</div>
 			
