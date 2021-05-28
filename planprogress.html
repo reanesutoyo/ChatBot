@@ -258,22 +258,44 @@ At this point I started writing a specification document. File Location: MS Team
 						<h6>DIALOGFLOW RESEARCH & INSIGHTS</h6>
 						<p>Dialogflow, a Google-owned chatbot development platform that enables developers to develop audio and conversational chatbots to respond to user questions in multiple languages automatically, was another platform we explored. Some of the positive aspects that we found are the flexibility where Dialogflow allows our chatbots to be integrated into a large variety of media, its support on multiple types of devices, such as wearables, to phones, computers, and also the multi-language support, with more than 14+ languages available worldwide.  </p>
 						<p>Alice and Reane have decided to test out this platform as a subgroup. /p>
+						<p align = "center" ><img src="images/Dialogflow2.jpg" alt="" width="" height="" ></p>	
 						<h6>EXPLORING THE CONSOLE & HOW IT WORKS</h6>
 						<ul>
 							<ol>We signed up to Dialogflow and created a new agent at console.dialogflow.com.</ol>
 							<ol>Enabled all Permissions asked by Google Cloud Console to let us have access to the Dialogflow console. We started playing around with the system, followed mainly guides on google Dialogflow </ol>
 							<ol>Below is the interface of Dialogflow, that we learnt how to use from the official google page, it was important for us to fully understand all the functions within the module to maximise our final prototype, we are able to manage everything needed to create this chatbot.</ol>
 						</ul>
+						<p align = "center" ><img src="images/Dialogflow3.jpg" alt="" width="" height="" ></p>	
 						<p>The design of the Dialogflow Console (above) is extremely straight forward and clean which we absolutely loved, very easy to use. Here is the explanation of all the key elements to build out chatbot, something very important for us to understand in order to produce a fully functional prototype:</p>
 						<li><strong>Agents :</strong> Our NLU (Natural Language Understanding) chatbot which we can give a name to</li>
 						<li><strong>Intents :</strong> Here we use intents to categorize a user’s intentions, where it have training phrases, example might be the end-user ask our chatbot “Who are you?, “What is your name?” or “do you have a name?” these questions are different yet they have the same intension: to get the name of the Chatbot. </li>
 						<li><strong>Entities :</strong> unlike intent entities used when end-user ask very specific information, like specific names, or addresses, or the number of units etc. The awesome thing about Dialogue flow is that there 3 types of entities, one of which is called system entities where it is already preloaded with numerous system entities, which allows our agent to extract existing information without having us to load them in ourselves, for example this would include like the current time or date, and location etc. The other two types of entities are called developer and session entities, which is when you need to develop your own entities, and entities that only apply to specific situations like booking a reservation for the end user. </li>
-						<li>Knowledge(Beta):This is something new that the V2 of Dialogflow introduced, where you can parse knowledge documents, for example FAQs, or Articles to find automated responses. The only limitation however, currently this is only available in English. This I think is extremely handy, since our chatbot is mainly currently FAQ based</li>
+						<li><strong>Knowledge(Beta):</strong>This is something new that the V2 of Dialogflow introduced, where you can parse knowledge documents, for example FAQs, or Articles to find automated responses. The only limitation however, currently this is only available in English. This I think is extremely handy, since our chatbot is mainly currently FAQ based</li>
 						<li><strong>Fulfillment:</strong> By default, our chatbot responds to a matched intent with a static response, however if you want to advance your chatbot, which is something we are hoping we would have time to get into, this is a “logic” or “smart” code that excutes when an intent is matched, our chatbot would then be able to perform an action or return a dynamic response by sending a webhook request to an external APIs and databases.  This part is of cos more complicated, however if time allowed, we would give it a go.</li>
+						<p align = "center" ><img src="images/Dialogflow4.jpg" alt="" width="" height="" ></p>	
 						<p><a href="https://cloud.google.com/architecture/building-and-deploying-chatbot-dialogflow. ">https://cloud.google.com/architecture/building-and-deploying-chatbot-dialogflow.</a>&gt;</p> 
-					
+						<p><strong>Integrations:</strong> this section is awesome and definitely a feature we will be using, this is where we can integration to our own website, and conversational platforms potentially for example Facebook, Twitter, Skype and other social media platforms, IoTs like Amazon Alexa, and Google Assistant (via a Google Home device or an Android smart phone) which are exactly the functions that we were looking for. Although different platforms, the chatbot will offer the same core chat functionality. </p>
+						<p align = "center" ><img src="images/Dialogflow5.jpg" alt="" width="" height="" ></p>
+						<p>We explored Dialogflow as a Chatbot development platform by Google that enables developers to develop audio and conversational chatbots to automatically responds to user's questions in multiple languages. It is used for Natural language processing using Machine learning; it runs on the Google infrastructure. Infrastructure can be scaled according to your needs. We tested out the platform and found out some beneficial features that are available, for example, easy integration website's webchat service </p>
+						<h6>Week 3 (May 1st – May 7th)</h6>
+						<p>Creating the Dialogflow prototype will be the main focus of this week.</p>
+						<h6>CREATING THE DIALOGFLOW PROTOTYPE</h6>
+						<p>Week 1, we thoroughly learned the Dialogflow Console; this moved us to the next step. If we were to make this Prototype In real life, we had to split the work among us. Alice was responsible for mainly doing all the related research, writing, planning, and evaluation of the Prototype, while Reane would focus on the overall physical construction of the Prototype. We also created an architectural Design of our Prototype for a better understanding of how it works:</p>
+						<h6>Chatbot Architectural Design</h6>
+						<ul>
+							<li>Typical Chatbot Architecture consist of a bot engine, your own backend web application and a chat platform</li>
+							<li>This message would go through your own web application, where you would validate it.</li>
+							<li>If everything is okay the message would be sent to the bot engine(such as DialogFlow</li>
+							<li>Bot engine would use techniques like Natural Language Processing and Machine Learning to form a response that is message to the user</li>
+							<li>This would be sent back to your server, where you would validate and do the app logic.</li>
+							<li>The benefit of using your own server, is that you can also communicate with other web services(other APIs) with your own database to store data from the user input or provide additional content for the user such as list of product, images and so on.</li>
+							
+						</ul>
+						<p align = "center" ><img src="images/Dialogflow6.jpg" alt="" width="" height="" ></p>
+						<p></p>
+						<p></p>
+						<p></p>
 						
-					
 					</article class>
 						</div>
 			</section>
