@@ -55,9 +55,9 @@
 
 						<header>
 							<h2>PLANS AND PROGRESS </h2>
-
+							
 						</header>
-         
+         					
 						<p></p>
 						<h2><a name="_Toc69739723"></a>Project Planning Summary </h2>
 						<p>In order to sufficiently aim for the completion of the project within the limited timeframe, it is essential for all members of the Chatbots Team to set project milestones and deliverables illustrating the project breakdowns creating a manageable plan that we can all adhere to throughout the project. However, it is expected that not all steps of the project will be adhered throughout the process, everyone member of our group will illustrate their project schedule and progress through a Gantt chart through the Team Planner app of Microsoft teams.  </p>
@@ -67,9 +67,27 @@
 						 <p> Prototype Url <a href="https://young-reef-90350.herokuapp.com/">https://young-reef-90350.herokuapp.com/</a>&gt;</p> 
              <p> Github Url <a href="https://github.com/S3886040/ChatBot">https://github.com/S3886040/ChatBot</a>&gt;</p> 
              <p> Demo Video <a href="https://youtu.be/TQ-smnGU6SM">https://youtu.be/TQ-smnGU6SM </a>&gt;</p> 
+						<h4>Week 1 (April 17th-april 23rd) </h4>
+						<p>Week 1 is the planning stage. To make a prototype, of something as complex as a chatbot can be, we must first investigate to ascertain what may be possible and realistic in this project. And then start to investigate how we could proceed to the building and testing phase. </p>
+						<p> After researching(‘googling’) some chatbots that are already out there. And looking for potential services that could assist in creating something marketable. </p>
+						<p>The research brought two likely candidates for a prototype. The first being Microsoft Azure (they offer a free trial for testing and development), and Discord (free API calls up to 1,000 per day). Both are claiming to have an easy to build chat bot framework. So, the investigation led first with these two.</p>
+						<h4>Week 2 (April 24th- April 30th)</h4>
+						<p>After some more research, Discord proved to be too limited for the uses of this project. The bot framework they support is to easily create a bot within a discord server. The framework they created is a coding package for use in NodeJS and Python which makes it easy to create some basic bot logic then send it directly to Discord server where it will be rendered in your Discord channel. So, in other terms it is a bot that can only be used while using discord. This does not suit us as we require a bot that can be exported and used outside of this environment. With Microsoft Azure left we continued to investigate this as a possibility.</p>
+						<h4>Week 3 (May 1st – May 7th)</h4>
+						<p>Exploring Microsoft Azure </p>
+						<p>After some more investigation Microsoft Azure offers something called a cognitive service. And this can be used to create “chatty” QnA Bot. Through reading the documentation of this service, I began to create a QnA Bot.</p>
+						<p>This process was tedious. The Microsoft Azure platform is neither intuitive nor user friendly. But with the help of the supporting documentation, I could create a “Knowledge Base”. This forms the basis of the QnA function. The platform will accept FAQ URLs from websites. So, you simply pass the URL into the field where it is required, and their system reads the webpage to procure the Questions and answers. After feeding the knowledge base some FAQ pages on Covid-19. You “publish” the knowledge base then Azure has provided a chat window to test and interact with the bot. Success! It works. </p>
+						<p>But this chat window exists only the Microsoft Azure platform. The question then becomes how to produce a product from this. But the answer comes quite simply in the form of an API supplied by Microsoft. At this point it becomes clear that in order to create a running prototype we will need to use code to create one using the API that Microsoft provide. I have some experience in developing programs with JavaScript. So, I begin working on the App.</p>
+						<p>The idea originally was to create a front facing application for the chat bot using the Microsoft API to interact with the knowledge base to get answers from the users’ questions, then render this on a chat window using JavaScript. The Microsoft API requires a key for authentication, which I assumed could be hidden using the GitHub environment secrets so we could incorporate the chat bot on the GitHub pages assignment website. </p>
+						<p>But after completing a functioning prototype this way, I discovered that these environment variables do not function as I assumed. These environment variables are for use in the GitHub Actions API and are not for use GitHub Pages Applications. In fact, all GitHub pages does is serve static HTML and all scripts and style sheets linked to it. So, there would be no way to keep my API key safe from prying eyes while using only a front facing application. What I would have to do is program a server to do the API call and leave the front end the job of dynamically rendering the HTML questions and answers from our user and the Bot response. </p>
+						 <h2><a name="_Toc69739723"></a>Node JS</h2>
+						<p>Week 4 (May 8th – May 14th) </p>
 						
-
-
+						<p>During Week 3 I began to create the Server using NodeJS with Express as a framework. The process is quite simple using Express. The process was quite swift. To call the Microsoft API I used AXIOS. This is a promise-based API library that makes API calls simpler. After creating the server, a new workflow is created. The user will type a message using the chat window, hit Send, the front-end JavaScript then renders the question on the screen and passes the question to the back end using AXIOS. Once received by the Backend the Microsoft API is called, again using AXIOS. Using the, now secured, API key and the response is delivered back to the front end for rendering in the Chat Window. If an error occurs this is caught but no message is delivered to the user informing them of this. This is a feature that could be added in future development. </p>
+						<p>Once this process is completed, I use the time to style window and add the chat bubbles using CSS. And make the application appear more professional and pleasing to the eye. But from the next issue is lurking. Because after all this work I have nowhere to host it so it can be seen by users, investors, or assessment graders. From here I decide to host it using Heroku. Its free, easy to use and fits the purposes of this assessment. </p>
+						<p>The process of having a project hosted by Heroku is normally easy. But in this case, it did not go to plan. The idea is you create an app on your profile, then you receive a GitHub URL from Heroku to set up as a remote Repo. Then push the exiting code to this URL. Then it should be visible on your app’s website. This did not work. I received lots of errors. Without knowing the source of the error, I consulted goggle for answers. But none came. So, it was decided that there must be something fundamentally wrong with my program’s server even though everything worked perfectly in a development environment. I downloaded a Heroku template for NodeJS and adapted my program into this template. But still the error persisted. After some research, no answer came. </p>
+					
+					
 					</article>
 
 				</div>
