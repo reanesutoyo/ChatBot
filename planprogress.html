@@ -57,12 +57,12 @@
 							<h2>PLANS AND PROGRESS </h2>
 							
 						</header>
-         					
-						<p></p>
-						<h2><a name="_Toc69739723"></a>Project Planning Summary </h2>
+         					<h4><a name="_Toc69739723"></a>Project Planning Summary </h4>
+						
+						
 						<p>In order to sufficiently aim for the completion of the project within the limited timeframe, it is essential for all members of the Chatbots Team to set project milestones and deliverables illustrating the project breakdowns creating a manageable plan that we can all adhere to throughout the project. However, it is expected that not all steps of the project will be adhered throughout the process, everyone member of our group will illustrate their project schedule and progress through a Gantt chart through the Team Planner app of Microsoft teams.  </p>
             <h2><a name="_Toc69739723"></a>Microsoft Azure</h2>
-            
+            <p>By:Justin Healy</p>
            
 						 <p> Prototype Url <a href="https://young-reef-90350.herokuapp.com/">https://young-reef-90350.herokuapp.com/</a>&gt;</p> 
              <p> Github Url <a href="https://github.com/S3886040/ChatBot">https://github.com/S3886040/ChatBot</a>&gt;</p> 
@@ -94,8 +94,8 @@
 					
 					</article>
 				</div>
-					<div class="container">
-					<article class="box post">
+					
+					
 
 						<header>
 							<h4>PROTOTYPE 2 – MICROSOFT AZURE</h4>
@@ -103,7 +103,7 @@
 						</header>
          					
 						<p>By John Hurst</p>
-						<h2><a name="_Toc69739723"></a>PROTOTYPE 2 – MICROSOFT AZURE</h2>
+						<h4><a name="_Toc69739723"></a>PROTOTYPE 2 – MICROSOFT AZURE</h4>
 						<p> These are not in production. They are experiments. Please see the help page on the repo for details. I invite any prospective Student or Tutor to clone the repo and then import the projects into their Eclipse environment. Some are maven projects. </p>
             <h2><a name="_Toc69739723"></a>Microsoft Azure</h2>
 						<p> Prototype Url <a href="https://github.com/s3882857/ChatBotExperiment">https://github.com/s3882857/ChatBotExperiment</a>&gt;</p> 
@@ -124,11 +124,76 @@ File Location: MS Teams > Teams > Documents > General > Azure AI’s Daily Log.o
 </p>
 						<h6>Overall Plan: Develop a Chatbot Service capable of answering questions regarding the Covid 19 virus.)</h6>
 						<p>Planning Stage: Investigate AIs, Machine Learning, etc. Companies that can provide a service. What, how? </p>
-						<p></p>
-						<p></p>
-						<p></p>
-           				 </article>
+						<h6>Notes from my daily log (01/05/21 approx. 4 hrs.):</h6>
+						<p>Today's Plan: Investigate possible alternative AIs Chatbots with other providers (Amazon qnabot):</p>
+						<ul>
+							<li>amazon.com/qnabot. Just as difficult, we are unlikely to be able to build a chatbot in Java, too many complexities. </li>
+							<li>We would need to hire a specialist to help us get the basics operational. </li>
+							<li>Unable to get a basic chatbot service running.</li>
+							<li>Requires more in-depth knowledge of Java and the associated packages. Maven, plugin ab.jar. </li>
+						</ul>
+						<h6>Notes from my daily log (02/05/21 approx. 2 hrs.):</h6>
+						<p>Today's Plan: Continue Investigating possible alternative Java Webservice to communicate with the MS Azure Chatbot.</p>
+						<ul> 
+							<li>There are many already built medical diagnosis Chatbots out in the market. Not sure why we are doing this?</li>
+							<li>I am seeing a lot of medical Chatbots out in the market. Some of these are good, they diagnose using a variety of mobile phone tools, photos, heart rate monitors, very impressive technology. To tell you the truth I had become convinced that such technologies were fads surely to fade out, but now not so sure. 	</li>
+							<li>Hoping Justin H, has something running in JavaScript. That might be easier. </li>
+							<li>Chatbots, Machine Learning, etc. I think is outside of our scope of understanding at this point in our studies. </li>
+					
+							
+						</ul>
+						<h6>Notes from my daily log (04/05/21 approx. 2-3 hrs.):</h6>
+						<p>Today's Plan: Investigate using Discord as a front end Webservice platform to communicate with the MS Azure Chatbot.</p>
+			<p>Simply put, an endpoint is one end of a communication channel. When an API interacts with another system, the touchpoints of this communication are considered endpoints. For APIs (Application Programming Interfaces), an endpoint can include a URL of a server or service. The place that APIs send requests and where the resource lives, is called an endpoint. </p>
+			<p>Need an endpoint API service to act as the initial starting point for the chatbot. We can then enable multiple or one chatbot services, but also have the flexibility to switch. This would enable different FAQs for each customer depending on what they wanted.</p>
+			<p>Discord for running our service is not what we are looking for. This service is more of a toy than a commercial web application service. The tools here do not suit our purposes. We need to deploy our own Endpoint on GitHub.
+At this point I started writing a specification document. File Location: MS Teams > Teams > Documents > General > Spec AI ChatBotCovid19
+</p>
+			<h6>Notes from my daily log (18/05/21 approx. 6 hrs.): </h6>
+			<p>Today's Plan: Get the Java Webservice communicating with the MS Azure Chatbot. </p>
+			<ul>
+				<li>Success! Well, I have a Java Console driven program that can talk to the MS Azure QnA cognitive bot service. </li>
+				<li>Turns out once I explored another avenue, it was easy than I expected. Microsoft's tutorials were a distraction I could have done without. All I have wanted to achieve was to send a https POST request to the service and be able to interpret the response. However, Microsoft's tutorials do not really cover this. They seem to be more about their own Software. 	 </li>
+				<li>I explored the postman.com website. Once I got the POST request configured here; I was better able to diagnose what was wrong. A few tweaks to the header parameters and I was away. Unfortunately, not having thought of this sooner, I have not left myself with enough time to explore building a fully deployable service on GitHub. This is only a Java Console routine working within Eclipse, I am damn happy I got to here. I needed a week away to reset and start again a fresh. </li>
+				<li>I did not detail this in my daily log. However, I created a second knowledge base within my Azure account. Called Australian Government FAQ on Covid 19. </li>
+				<li>I changed it to use the following FAQs URLs. It also uses a Professional language response interpreter. </li>
+			</ul>
+			<p><a href="https://www.health.gov.au/sites/default/files/documents/2020/04/coronavirus-covid-19-frequently-asked-questions_10.pdf ">https://www.health.gov.au/sites/default/files/documents/2020/04/coronavirus-covid-19-frequently-asked-questions_10.pdf </a>&gt;</p> 
+			<p><a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/coronavirus-frequently-asked-questions  ">https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/coronavirus-frequently-asked-questions  </a>&gt;</p> 
+			<p><a href="https://www.healthdirect.gov.au/coronavirus-covid-19-groups-at-higher-risk-faqs ">https://www.healthdirect.gov.au/coronavirus-covid-19-groups-at-higher-risk-faqs </a>&gt;</p> 
+			<h6>Notes from my daily log (22/05/21-24/05/21 approx. 18 hrs.):</h6>
+			<p>Today's Plan: Get the Java Webservice communicating with the MS Azure Chatbot.</p>
+			
+			<ul>
+				<li>Google searching:<a href="https://spring.io/guides/gs/rest-service/">https://spring.io/guides/gs/rest-service/</a>&gt;
+            </li>
+				<li>Git clone :<a href="https://github.com/spring-guides/gs-rest-service.git/">https://github.com/spring-guides/gs-rest-service.git</a>&gt;
+            </li>
+				<li>cd gs-rest-service/initial 	</li>
+				<li>Go to the spring initializer page to create a zip file to 	create a prepackaged project.</li>
+				<li>Use the following configurations.</li>
+				<li>Select Maven, Java, Spring Boot 2.4.6 (Should be defaulted to these)</li>
+				<li>Give your project a name. Do what you want with the rest.</li>
+				<li>Packaging Jar</li>
+				<li>Java 11 -	Then click Generate. It will download a zip file.	</li>
+				<li>Unzip into your eclipse workspace</li>
+				<li>Import into eclipse</li>
+			</ul>
+			
+			<p>I spent a lot more time building the actual test service API. It runs on my PC (Personal Computers) through tomcat. I developed a couple of applications to demonstrate the Chatbot.</p>
+			<p>Repository Link:<a href="https://github.com/s3882857/ChatBotExperiment">https://github.com/s3882857/ChatBotExperiment</a>&gt;</p>
+			<p>The below video link demonstrates both projects:</p>
+			<p><a href="https://rmiteduau.sharepoint.com/sites/A2group14/Shared%20Documents/General/Programming%201%20-%20ChatBotExperiment_src_ChatBot.java%20-%20Eclipse%20IDE%202021-05-26%2013-29-54.mp4">https://rmiteduau.sharepoint.com/sites/A2group14/Shared%20Documents/General/Programming%201%20-%20ChatBotExperiment_src_ChatBot.java%20-%20Eclipse%20IDE%202021-05-26%2013-29-54.mp4</a>&gt;</p>
+			<p>This file is in: MS Teams > Teams > Documents> General > “Programming 1 - ChatBotExperiment_src_ChatBot.java - Eclipse IDE 2021-05-26 13-29-54"</p>
+			</article>
 				</div>
+	
+				<div class="container">
+					<article class="box post">
+						
+					
+					</article class>
+						</div>
 			</section>
 
 			<!-- Footer -->
