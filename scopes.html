@@ -92,27 +92,142 @@
 						</header>
 						<p>How will your test your project? How will you know when you have succeeded? Testing is not something that you should leave until the very end; often it is far more useful to have a quick and dirty “mock up" of a project and then do some (limited) testing, to and out whether you are building the right product. </p>
 						<p>If your project involves user testing, you should describe in your plan how you will find the test users, approximately what number of people you will need, and what background (if any) is required. At least one paragraph is expected here.</p>
+						
 						<h4><a name="_Toc69739712"></a>UNIT TESTING</h4>
+						
 						<p>This is usually performed during the Development phase by the Developer/s. Each segment of code is verified by providing the expected data ranges and verifying the results. Each point of input/output is verified for accuracy and functionality. The Developer may perform these tests manually or co-develop automated processes to test each code segment as they go. </p>
 						<p>Each segment of code is tested in isolation and then scaled up as required until the entire programs output functionality requirements are met. </p>
 						<p>Before development proceeds the data, ranges must be clearly defined for the Developer to fully understand and anticipate the exact functionality and behaviors required. </p>
 						<p>It is expected that a single Developer will be required to fulfil this role. </p>
+						
 						<h6>Conclusion</h6>
+						
 						<p>This role will be performed by a Developer with adequate experience and knowledge required to build a Service Endpoint of this type. It will be performed during the development build phase of the project. </p>
 						<p>The expected input to the Chatbot will be a data string in the form of a question. The data will be in English, be alphabetic, and less than a configurable number of characters. This will need to be done in order, to limit the length of a sentence. This will aid in preventing long winded sentences that the Chatbot is unlikely to be able to give a meaningful response to. </p>
 						<p>The Developer must also be able to build a Testing utility capable of simulating the sending of simultaneous requests to the Service. This will be required to facilitate/aide in Performance Testing. It is not understood that the standard tools available can test the service to the required levels. </p>
 						<p>Therefore, an alternative Testing Utility will be developed. A backup alternative. The Developer will need to build a testing Utility of some kind anyway. Therefore, during the unit texting phase this Utility program can also be developed.</p>
 						<p>This Testing Utility will need a setup file capable of storing the intended message requests. The questions and the expected results (Response Messages). The Utility will retrieve all the messages, sending each request message to the Service and then verify that the response is correct. </p>
 						<p>The Utility will be capable of sending multiple messages simultaneously (At the same instance in time). The number of simultaneous requests will need to be configurable. That is, send twenty, or fifty, or one hundred etc. This must be a multi-threaded routine. </p>
+						
 						<h6>NOTE</h6>
+						
 						<p>This Utility program will be used during the development phase to initially simulate basic user testing. This will aid as a Development Utility as well as a secondary backup for Performance testing. It will aid in developing testing protocols before switching to more standardized testing monitoring programs. </p>
 						<p>This will enable an understanding of the tools themselves and subsequently a better understanding of the testing process and the requirements of the Service. 
 						The Utility program described above will be the secondary performance testing process.</p>
 						<p>Alternatively, we will need a lot of testing users that can simultaneously enter requests to the Chatbot. This is not a practical way to determine and assess the Bots performance. Neither will it simulate the possibility of multiple requests hitting the Service at the same time. This style of testing should only be used at the end-to-end user testing phase. </p>
 						
-				
-				
-			</article>
+						<h4><a name="_Toc69739712"></a>PERFORMANCE TESTING</h4>
+						<p>A general term for describing how the system behaves and performs. It examines the responsiveness, stability, scalability, reliability, speed and resource usage of the software and infrastructure. 
+						This phase will begin at the end of the development phase, but it will still involve the developer to resolve any identifiable performance issues. </p>
+						<p>Load testing and stress testing will need to be a continuous process during the entire life cycle of the product. Demand levels and performance levels will need to be continually reviewed. </p>
+						<p>To begin performance testing we must first identify and understand the expectations of our product. What is a reasonable expected response time for the product? How long before a user disengages from the service believing the product does not work or is not performing to their expectations. </p>
+						<p>The Average Response Time will need to be less than 3 seconds. </p>
+						<p>There are two main bottleneck points that need to be examined to ensure this can be achieved. The first is the AI Chatbot service itself. The Service is utilizing MS Azure AI Chatbot service. The performance here will need to be examined. </p>
+						<p>The second bottleneck point will be the Endpoint Service that we will develop to access the MS Azure AI Chatbot Service itself. </p>
+						<p>How many/much resource will be required? Can it be scaled up if necessary? What will be the costs if increased performance is required? When are resources consumed the most? Do we need to provide a single service to every customer? Will we need to build separate and configurable Services for each customer? Will a single service suffice or not? </p>
+						
+						<h6>Conclusion</h6>
+						<p>The Developer will need to ensure that the Service is generic and portable, in that it can be configurable to ensure specific customer objectives can be met. Several specific and separate Services based on the original may need to be built. This will ensure that any performance expectations can be met for any customer; That is, the service will be required to be Taylored to specific customer needs and performance expectations. It is not a given that a single service will cater to all customer demands. </p>
+						<h6>NOTE</h6>
+						<p>This will be a continually evolving refining process. It is not yet understood how much activity can be dealt with by the bot. It is a safe bet that each customer will expect the bot to respond to questions in a unique way. They will expect subtlety, differing responses from the Bot. We will more than likely need to enable differing data files, FAQs for each specific customer. This is the way to reduce the scope of the product.</p>
+						</article>
+					
+					<article class="box post">
+					<h4><a name="_Toc69739712"></a>LOAD TESTING</h4>
+						<p>Load testing will need to be performed to determine how the service will perform under heavy volumes of traffic (user requests). It can be assumed, that specific periods of time we can expect heavier volumes of traffic, holiday periods, etc. People will be more curious about travelling during Covid restrictions. It is reasonable to expect higher levels of traffic during specific calendar periods. </p>
+						<p>We will need to simulate performance extremes equivalent to the maximum expected requests anticipated. How can this be determined? Traffic volumes at first will only be an estimation as this process is refined as we go along a better understanding of overall performance testing requirements can be ascertained; We pick a point and then adjust, much like Machine Learning. </p>
+						<p>Initial load testing will need to be performed for each potential service configured. Additional reviews may need to be performed to assess the service over time. </p>
+						<p>We need to understand how many actual users requests the service can handle at a time. At what point will the system/service crash? How many user requests can be handled in each period before running out of memory, at what point is the CPU (Central Processing Unit) running too hot or fast. </p>
+						<p>This process will be expected to continue through the life cycle of the product. This will need to be continuously refined. </p>
+						<p>There are many products that we can choose to enable Load and Stress Testing. Start with one and find out exactly what to expect and refine. We may need to switch products as we go along, learning more as we go. A good starting point is JMeter. </p>
+						<p>“Jmeter is an Open-Source testing tool. It is a pure Java application for stress and Performance Testing. Jmeter is intended to cover types of tests like load, functional, stress, etc. It needs JDK 5 or higher to function.”  </p>
+						<p>The above is a direct quote from<a href="https://www.guru99.com/stress-testing-tutorial.html#:~:text=Jmeter%20is%20an%20Open%20Source,for%20stress%20and%20Performance%20Testing.">link here</a></p>
+						<ul>
+							<li>LoadNinja </li>
+							<li>Apache JMeter </li>
+							<li>WebLoad</li>
+							<li>LoadUI Pro </li>
+							<li>JMeter</li>
+							<li>Selenium</li>
+							
+						</ul>
+						<p>There are also some useful websites that will aide in assisting us to refine this process. </p>
+						<p><a href="https://www.edureka.co/blog/performance-testing-tools/ ">https://www.edureka.co/blog/performance-testing-tools/ </a></p>
+						<p><a href="https://www.blazemeter.com/blog/performance-testing-vs-load-testing-vs-stress-testing ">https://www.blazemeter.com/blog/performance-testing-vs-load-testing-vs-stress-testing </a></p>
+						<h6>Conclusion </h6>
+						<p>Exact answers cannot and should not be ascertained at this phase. That is the point of this phase. It will need to be refined as we go along. Expected performance levels should not be assumed to be within tolerances. </p>
+						<p>The above testing/monitoring tools will be utilized; however, they should not be relied upon as the only means of testing.</p>
+						<p>The Testing Utility will be required as a backup for initial testing. I expect that the service should be able to handle at least 20 simultaneous messages and give a reasonable response time to each request within 3 seconds. It is unlikely, that traffic flows would exceed this level. However, this is not a given assumption. It must be tested and refined as need be. We may need to design a specific Bot for a given customer if performance expectations cannot be fulfilled by a single generic service.</p>
+						<p>Alternatively, attempting to use a lot of users to simulate this testing process is not practical or useful. User End to End testing will be the final test for functionality and behavior only.</p>
+						<h4><a name="_Toc69739712"></a>STRESS TESTING</h4>
+						<p>This is a test designed to examine the exact point when the system can no longer cope with demand. Understanding the point when the system/service will crash. Testing the product to its extremes. </p>
+						<h6>Conclusion</h6>
+						<ul>
+						<li>The Standard Monitor/Testing programs will be used to Stress Test.</li>
+						<li>Alternatively, The Performance Testing Utility will also be used to perform this test. </li>
+						<li>Alternatively, attempting to use a lot of users to simulate this is not practical. </li>
+
+						</ul>
+						<h4><a name="_Toc69739712"></a>USER END TO END</h4>
+						<p>The basic questions the Chatbot should be trying to answer is, “Do I have Covid 19? Do I need a test”? No matter what we try to do here, these are the final decisions the person needs to make for themselves. The Chatbot should only be helping the person to make these decisions a little easier. And to not overlook any immediate issues relating to the spread of the disease. </p>
+						<p>In the process, the Chatbot will filter unnecessary and frivolous enquiries away from the institutions currently purposed to resolve these enquires without the possibility of error</p>
+						<p>However, we must understand, the questions the service Chatbot needs to be able to deal with are many and varied. </p>
+						<p>The configuration settings have been enabled to handle a set of preconfigured professional responses to pre-set questions. However, this needs some work. </p>
+						<p>The responses often do not make sense. Indicating the chatbot has not understood the question.  </p>
+						<p>The responses do not correspond or correlate to the question. </p>
+						<p>The context of any conversation with the Chatbot must center around Covid 19 questions and answers. </p>
+						<p>Therefore, the assumption for questions referring to the Chatbot itself, must answer with a description of the Chatbot Covid 19 enquiry system. Open ended questions such as, “What are you,” “What do you do,” “How can you help me,” “Hello,” “Who are you,” must reply with a description of the Covid 19 Chatbot. </p>
+						<p>Questions such as, “What is it,” “What is going on” must assume the person is referring to Covid 19. Therefore, a reply of a description of Covid 19 will be required to any of these types of questions. </p>
+						<p>Questions relating to the symptoms “What are the symptoms,” “How do I know if I have it,” “I have a cough,” “I have a runny nose,” “I feel sick,” “I have a headache,” “Symptoms,” “Headache,” “Cough” etc. Should reply with a comprehensive list of the known symptoms. </p>
+						<p>Questions relating to “I have covid,” “Do I have covid,” “How can I tell If I have Covid.” Should also reply with a comprehensive list of the known symptoms. </p>
+						<h6>THE QNA STYLE OF CHATBOT WHEN GIVEN A GOVERNMENT FAQS (FREQUENTLY ASKED QUESTIONS)</h6>
+						<p>Some basic questions and answers have been given below. </p>
+						<p>This is the style or form of testing that needs to take place. </p>
+					
+						<table>
+  						<tr>
+    						<td>User Question</td>
+    						<td>Expected Result</td>
+    						<td>Actual Response</td>
+   						<td>Correct?</td>
+  						</tr>
+  						<tr>
+    						<td>How many people are infected with covid?</td>
+    						<td>Access to database information to give an answer.</td>
+    						<td>I do not have a family.</td>
+    						<td>Fail</td>
+  						</tr>
+ 						<tr>
+    						<td>What is Covid?</td>
+    						<td>Coronaviruses are a large family of viruses known to cause respiratory infections. These can range from the common cold to more serious diseases such as Severe Acute Respiratory Syndrome (SARS) and Middle East Respiratory Syndrome (MERS). This new coronavirus originated in Hubei Province, China and the disease caused by the virus is named COVID-19.</td>
+    						<td>Coronaviruses are a large family of viruses known to cause respiratory infections. These can range from the common cold to more serious diseases such as Severe Acute Respiratory Syndrome (SARS) and Middle East Respiratory Syndrome (MERS). This new coronavirus originated in Hubei Province, China and the disease caused by the virus is named COVID-19.</td>
+    						<td>Yes/Pass</td>
+   
+  						</tr>
+  						<tr>
+    						<td>“What are the symptoms?”</td>
+    						<td>Mother-in-law</td>
+    						<td>Me</td>
+    						<td>Me</td>
+    						<td>Sister-in-law</td>
+  						</tr>
+ 						<tr>
+    						<td>Covid</td>
+    						<td>Eats everyone's leftovers</td>
+    						<td>Nibbles at food</td>
+    						<td>Hearty eater</td>
+    						<td>Will eat till he explodes</td>
+  						</tr>
+   						<tr>
+   						<td>Covid</td>
+    						<td>Eats everyone's leftovers</td>
+    						<td>Nibbles at food</td>
+    						<td>Hearty eater</td>
+    						<td>Will eat till he explodes</td>
+  						</tr>
+						</table>
+					</article>
+			
 			</div>
 			</section>
 			
