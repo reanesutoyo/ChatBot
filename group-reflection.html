@@ -176,8 +176,81 @@
 							<h2>PLATFORMS USED TO BUILD OUR PRODUCT</h2>
 						</header>
 						<h3>Prototype Using Microsoft Azure</h3>
+						<p>By Justin Healy</p>
 						<br>
+						
+						<ul>
+							<li>Atom was used along with Microsoft Azure to develop the prototype for this assignment. </li>
+							<li>Axios was used for the API requests on both the Front-end code, and server-side API calls. This is a great service. It makes API calls a much simpler process. It is a promise-based framework that is compatible with nearly all modern browsers. This is a significant advantage, as JavaScript has a native equivalent in the "fetch()" function. However, when we use it, we did run into compatibility issues. Particularly with older safari and internet explorer browsers. Despite the fact that this is only a prototype, the goal was to create a basic functional chat bot with scalability for future development. This is permitted by Axios.In terms of code, I used JavaScript, CSS and HTML to build the prototype. </li>
+							<li>In creating the above prototype, we used Microsoft Azure as the Engine, making use of their Cognitive services and QNA maker API. As well JavaScript, HTML, CSS in the front end and NodeJS to program a basic server. </li>
+						</ul>
+						<p>We also took advantage of the cognitive service provided by Microsoft Azure to develop the prototype. The Microsoft Azure platform is difficult to use and very non-user friendly. But can be powerful when used correctly. The service used for the prototype was the QnA Maker API. </p>
+						<p>This is an interesting service from Microsoft as they make it possible to create a specific knowledge base from which business can use for customer enquiries. We used this service in order to create a Covid QnA Bot. </p>
+						<p>What it essentially does is allows the user to create an app from QnA maker portal then it creates an API from Microsoft's other services to serve as a QnA. Once you create a knowledge base with your custom FAQ, Azure will publish the service and give you an API address to call to. But what it does under the hood is compile a search service, an App Service, a cognitive service and a resource group. Then it uses all these when the QnA API is called to generate a response for the user. </p
+						
+						
+						<p>Through the process of building the prototype the idea was to build something with a simple yet with scalable infrastructure to allow for future development. By having a backend this allows us to keep our API tokens secret and hide the logic from the end user. But the server is easily scalable by adding features to increase the Intelligence of the Bot. At the moment, the Bot receives a message from the user then send this message directly to the Microsoft API to be understood and generate a relevant response.</p>
+						<p>But further to this we could add some logic to the user’s question to decide whether the Microsoft API needs to be consulted. For example, we could store some questionand-answer combos for basic questions in the back end for quick use and consult the API for more complex questions.</p>
+						<p>My hope for this would be to one day phase out the use of any Intelligence framework and have a completely self-sustainable Machine learning and AI program to interact with our users without the added cost of external Frameworks. </p>
+					
+						<h6>The flow of the App runs like so: </h6>
+						<ul>
+							<li>The user clicks on the Bot Icon. </li>
+							<li>JavaScript is then used to render the chat window.  </li>
+							<li>The user can then type a message and hit the send button. </li>
+							<li>The user’s message is then rendered in the chat window using JavaScript. </li>
+							<li>The message is then sent to the backend using Axios(API HTTP client for sending API requests) </li>
+							<li>The backend will then send the users question to Microsoft Azure. </li>
+							<li>A response is received from Microsoft Azure and sent back to the front end. </li>
+							<li>The front End then renders the response in the chat window. </li>
+							<p>And the process can continue like this indefinitely. </p>
+							
+						
+						</ul>
 					</article>
+					
+					<article class="box post">
+						
+						<h3>Prototype Using Microsoft Azure</h3>
+						<p>by John Hurst</p>
+						<br>
+						
+						<p>Git Hub Repository<a href="https://github.com/s3882857/ChatBotExperiment">https://github.com/s3882857/ChatBotExperiment</a></p>
+						<p>This is not a fully working Endpoint yet. It is meant as a proof of concept. All three projects will run on a local machine. Two of which connect to the MS Azure AI Chatbot service. This is based on the QnA cognitive service. </p>
+						
+						<h6>Tools</h6>
+						<p>The first project Chatbot.java is an all-in-one conversation between the console and the MZ Aure Chatbot. It sends a POST request and interprets the response, displaying it to the user. Console driven only. </p>
+						<ul>
+							<li>Eclipse </li>
+							<li>Java </li>
+							<li>JSON external libraries </li>
+							<li>Maven </li>
+						</ul>
+						<p>The Second project ChatBotCovid19Service.java is more of a service which utilizes the spring boot libraries. This runs within apache tomcat on a local PC within eclipse. </p>
+						<ul>
+							<li>Eclipse </li>
+							<li>Java </li>
+							<li>JSON external libraries </li>
+							<li>Maven </li>
+							
+							<li>Spring boot libraries </li>
+							<li>Webservice is based on REST Architecture. </li>
+							<li>Apache tomcat (Although I did not have to know much about this. Spring starts it for you) </li>
+							
+						</ul>
+						<p>The third project is a testing interface which uses a console interface within eclipse to communicate with the above service. </p>
+						<p>Investigated usage of Maven for Java projects within Eclipse. Installed and utilized within my projects. 
+							Installed spring plugin into Eclipse. This led to more success in developing a Webservice in Java. Also required for a REST service 
+							</p>
+						<p>Installed JSON libraries into Eclipse. Used within Chatbot demo services. 
+						The Microsoft procedures for building a Webservice in Java I found unhelpful, too complicated for a beginning project. However, I did spend a lot of time investigating to no avail. 
+						</p>
+						<p>This is a collection of Java based console programs. They are Eclipse projects. Please visit the repositories help file for further details. </p>
+						
+						
+						
+					</article>
+					
 						
 
 						
