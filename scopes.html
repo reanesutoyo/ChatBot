@@ -61,13 +61,61 @@
 						
 						<p>In brainstorming, the group had many ideas to enhance the functionality of our product. There were even suggestions to add an app or accompanying website, making the product more of a general-purpose health advisory service. However, due to the limits of both our time and skill and to avoid introducing 'scope creep,' we decided that it would be prudent to limit the scope of our project to create a chatbot that can provide information regarding COVID 19. </p>
 						<p>The scope of our project will be to create a chatbot that can respond to a user's questions related to COVID 19; as such, the deliverables of the project will be the chatbot itself and how it responds to a range of user inputs. To demonstrate these deliverables, we could either allow the marker to interact with the chatbot or supply it with sample inputs and record the outputs. </p>
-						<p></p>
-						<p></p>
+						<p>It is also useful to set limits on the kind of tasks that the chatbot can perform, such as the kinds of inputs it can respond to and the type of advice that it can produce. There is an overwhelmingly large number of questions that a user could hypothetically ask about Covid 19, in various languages, ways of phrasing, and with the possibility for mistakes.</p>
+						<h6>Input limits</h6>
+						<ul>
+							<li>One limit to our project is that our chatbot will only respond to queries written in English. It would be an incredibly large undertaking to create a chatbot that could understand and respond in any language. Also, the members of our group do not have the necessary language skills to test that chatbot that can understand and reply in any language.  </li>
+							<li>To enhance the functionality of our chatbot, the design should aim towards getting user inputs as short responses to questions rather than allowing users to type long responses, which may confuse that chatbot. People may have many ways of expressing the same thing, and it may be difficult for the chatbot to understand what the user means. </li>
+							<li>Many chatbots ask a question to address this challenge and then provide a list of options that a user can select from. Or the chatbot could phrase questions in a way that leads to yes or no answers or exact answers. </li>
+						</ul>
+						<h6>Output limits</h6>
+						<ul>
+							<li>As the only input will be a user's description of symptoms in the form of words (no images or other kinds of data). It is not practical to expect that a chat bot will be able to accurately diagnose a user, only to be able to refer them to high quality and relevant information. As such, the chatbots answers will be general as it would be irresponsible to program the chatbot to give medical advice.</li>
+					
+							
+						</ul>
+						
         
         			</article>
 
 				</div>
+			
+			
+			<div class="container">
+
+					<!-- Content -->
+					<article class="box post">
+
+						<header>
+							<h2>TESTING</h2>
+							<p>By John Hurst</p>
+						</header>
+						<p>How will your test your project? How will you know when you have succeeded? Testing is not something that you should leave until the very end; often it is far more useful to have a quick and dirty “mock up" of a project and then do some (limited) testing, to and out whether you are building the right product. </p>
+						<p>If your project involves user testing, you should describe in your plan how you will find the test users, approximately what number of people you will need, and what background (if any) is required. At least one paragraph is expected here.</p>
+						<h4><a name="_Toc69739712"></a>UNIT TESTING</h4>
+						<p>This is usually performed during the Development phase by the Developer/s. Each segment of code is verified by providing the expected data ranges and verifying the results. Each point of input/output is verified for accuracy and functionality. The Developer may perform these tests manually or co-develop automated processes to test each code segment as they go. </p>
+						<p>Each segment of code is tested in isolation and then scaled up as required until the entire programs output functionality requirements are met. </p>
+						<p>Before development proceeds the data, ranges must be clearly defined for the Developer to fully understand and anticipate the exact functionality and behaviors required. </p>
+						<p>It is expected that a single Developer will be required to fulfil this role. </p>
+						<h6>Conclusion</h6>
+						<p>This role will be performed by a Developer with adequate experience and knowledge required to build a Service Endpoint of this type. It will be performed during the development build phase of the project. </p>
+						<p>The expected input to the Chatbot will be a data string in the form of a question. The data will be in English, be alphabetic, and less than a configurable number of characters. This will need to be done in order, to limit the length of a sentence. This will aid in preventing long winded sentences that the Chatbot is unlikely to be able to give a meaningful response to. </p>
+						<p>The Developer must also be able to build a Testing utility capable of simulating the sending of simultaneous requests to the Service. This will be required to facilitate/aide in Performance Testing. It is not understood that the standard tools available can test the service to the required levels. </p>
+						<p>Therefore, an alternative Testing Utility will be developed. A backup alternative. The Developer will need to build a testing Utility of some kind anyway. Therefore, during the unit texting phase this Utility program can also be developed.</p>
+						<p>This Testing Utility will need a setup file capable of storing the intended message requests. The questions and the expected results (Response Messages). The Utility will retrieve all the messages, sending each request message to the Service and then verify that the response is correct. </p>
+						<p>The Utility will be capable of sending multiple messages simultaneously (At the same instance in time). The number of simultaneous requests will need to be configurable. That is, send twenty, or fifty, or one hundred etc. This must be a multi-threaded routine. </p>
+						<h6>NOTE</h6>
+						<p>This Utility program will be used during the development phase to initially simulate basic user testing. This will aid as a Development Utility as well as a secondary backup for Performance testing. It will aid in developing testing protocols before switching to more standardized testing monitoring programs. </p>
+						<p>This will enable an understanding of the tools themselves and subsequently a better understanding of the testing process and the requirements of the Service. 
+						The Utility program described above will be the secondary performance testing process.</p>
+						<p>Alternatively, we will need a lot of testing users that can simultaneously enter requests to the Chatbot. This is not a practical way to determine and assess the Bots performance. Neither will it simulate the possibility of multiple requests hitting the Service at the same time. This style of testing should only be used at the end-to-end user testing phase. </p>
+						
+				
+				
+			</article>
+			</div>
 			</section>
+			
 
 			<!-- Footer -->
 			<section id="footer">
